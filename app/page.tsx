@@ -137,7 +137,7 @@ export default function Page() {
       {/* NAV */}
       <header className="sticky top-0 z-40 backdrop-blur bg-black/60 border-b border-white/5">
         <nav className="max-w-5xl mx-auto px-6 h-14 flex items-center justify-between">
-          <a href="#top" className="font-semibold tracking-tight">
+          <a href="#top" className="text-xl font-semibold tracking-tight">
             Ruturaj <span className="text-accent">Dixit</span>
           </a>
           <ul className="hidden sm:flex gap-6 text-sm text-gray-300">
