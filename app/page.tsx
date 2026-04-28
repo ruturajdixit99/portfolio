@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 
 const NAV = [
   { label: "About", href: "#about" },
@@ -60,6 +61,17 @@ const PROJECTS = [
     tags: ["Python", "PyTorch", "FastAPI", "AWS", "Docker"],
     href: "https://www.primemarketai.com",
     cta: "Visit live site →",
+    logo: "/primemarket-logo.png",
+  },
+  {
+    title: "Opinfer",
+    tagline: "Optimized Video Inference for ViTs & VLMs",
+    description:
+      "Open-source Python package that significantly optimizes video inference performance for Vision Transformers and Vision-Language Models by automatically adjusting parameters based on video characteristics.",
+    tags: ["Python", "PyTorch", "Vision Transformers", "VLMs", "Video AI"],
+    href: "https://github.com/ruturajdixit99/Opinfer",
+    cta: "View on GitHub →",
+    logo: "/opinfer-logo.jpg",
   },
   {
     title: "Pattern Recognition in Financial Charts",
@@ -76,13 +88,6 @@ const PROJECTS = [
     description:
       "Research on the ADAPT architecture — fine-tuning Meta SAM 3D, Depth Anything v3, and VGGT for downstream applications in human-AI interaction quality and trust.",
     tags: ["VLM", "SAM 3D", "Depth Anything", "Fine-tuning"],
-  },
-  {
-    title: "Antler Hackathon",
-    tagline: "ChatGPT API × Pincaster",
-    description:
-      "Shipped a working LLM-powered conversational layer over a real product surface in under 72 hours. Demonstrated agentic copilot integration end-to-end.",
-    tags: ["LLM", "ChatGPT API", "Hackathon"],
   },
 ];
 
@@ -157,37 +162,54 @@ export default function Page() {
       <section id="top" className="relative">
         <div className="absolute inset-0 grid-bg pointer-events-none" />
         <div className="max-w-5xl mx-auto px-6 pt-20 pb-24 sm:pt-32 sm:pb-32 relative">
-          <p className="text-xs uppercase tracking-[0.2em] text-accent mb-5 animate-fade-in">
-            Data Scientist · AI/ML Engineer
-          </p>
-          <h1 className="text-4xl sm:text-6xl font-semibold tracking-tight leading-[1.05] animate-fade-up">
-            Building AI-native products and shipping
-            <span className="block text-gray-400 mt-1">
-              production ML for global enterprises.
-            </span>
-          </h1>
-          <p className="mt-8 max-w-2xl text-lg text-gray-300 animate-fade-up" style={{ animationDelay: "120ms" }}>
-            I&apos;ve shipped AI systems for Tokyo Electron, Lamb Weston, and Stellantis at TCS,
-            founded{" "}
-            <a className="text-white underline underline-offset-4 decoration-accent/60 hover:decoration-accent" href="https://www.primemarketai.com">
-              PrimeMarket AI
-            </a>
-            , and now research vision-language and depth-foundation models at the Pace AI Lab while finishing
-            an M.S. in Data Science.
-          </p>
-          <div className="mt-10 flex flex-wrap gap-3 animate-fade-up" style={{ animationDelay: "240ms" }}>
-            <a
-              href="#projects"
-              className="rounded-full bg-white text-black px-5 py-2.5 text-sm font-medium hover:bg-gray-200 transition-colors"
-            >
-              View Projects
-            </a>
-            <a
-              href="#contact"
-              className="rounded-full border border-white/15 px-5 py-2.5 text-sm font-medium hover:border-white/40 transition-colors"
-            >
-              Get in Touch
-            </a>
+          <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-12">
+            <div className="flex-1">
+              <p className="text-xs uppercase tracking-[0.2em] text-accent mb-5 animate-fade-in">
+                Data Scientist · AI/ML Engineer
+              </p>
+              <h1 className="text-4xl sm:text-6xl font-semibold tracking-tight leading-[1.05] animate-fade-up">
+                Building AI-native products and shipping
+                <span className="block text-gray-400 mt-1">
+                  production ML for global enterprises.
+                </span>
+              </h1>
+              <p className="mt-8 max-w-2xl text-lg text-gray-300 animate-fade-up" style={{ animationDelay: "120ms" }}>
+                I&apos;ve shipped AI systems for Tokyo Electron, Lamb Weston, and Stellantis at TCS,
+                founded{" "}
+                <a className="text-white underline underline-offset-4 decoration-accent/60 hover:decoration-accent" href="https://www.primemarketai.com">
+                  PrimeMarket AI
+                </a>
+                , and now research vision-language and depth-foundation models at the Pace AI Lab while finishing
+                an M.S. in Data Science.
+              </p>
+              <div className="mt-10 flex flex-wrap gap-3 animate-fade-up" style={{ animationDelay: "240ms" }}>
+                <a
+                  href="#projects"
+                  className="rounded-full bg-white text-black px-5 py-2.5 text-sm font-medium hover:bg-gray-200 transition-colors"
+                >
+                  View Projects
+                </a>
+                <a
+                  href="#contact"
+                  className="rounded-full border border-white/15 px-5 py-2.5 text-sm font-medium hover:border-white/40 transition-colors"
+                >
+                  Get in Touch
+                </a>
+              </div>
+            </div>
+
+            {/* Profile photo */}
+            <div className="flex-shrink-0 flex justify-center md:justify-end animate-fade-in">
+              <div className="relative w-52 h-52 sm:w-64 sm:h-64 rounded-2xl overflow-hidden border border-white/10 ring-1 ring-white/5 shadow-2xl">
+                <Image
+                  src="/profile-headshot.png"
+                  alt="Ruturaj Dixit"
+                  fill
+                  className="object-cover"
+                  priority
+                />
+              </div>
+            </div>
           </div>
 
           {/* quick stats */}
@@ -227,11 +249,21 @@ export default function Page() {
               At Pace, I&apos;m a TA + AI Lab researcher working on vision-language and depth-foundation models.
             </p>
           </div>
-          <aside className="rounded-xl border border-white/10 p-6 space-y-3 bg-white/[0.02]">
-            <Detail label="Based in" value="New York, NY · open to SF" />
-            <Detail label="Education" value="M.S. Data Science, Pace (May 2026)" />
-            <Detail label="Languages" value="English, Hindi, Marathi" />
-            <Detail label="Currently" value="Researching VLMs · Building PrimeMarket AI" />
+          <aside className="rounded-xl border border-white/10 overflow-hidden bg-white/[0.02]">
+            <div className="relative w-full h-64">
+              <Image
+                src="/profile-full.png"
+                alt="Ruturaj Dixit"
+                fill
+                className="object-cover object-top"
+              />
+            </div>
+            <div className="p-6 space-y-3">
+              <Detail label="Based in" value="New York, NY · open to SF" />
+              <Detail label="Education" value="M.S. Data Science, Pace (May 2026)" />
+              <Detail label="Languages" value="English, Hindi, Marathi" />
+              <Detail label="Currently" value="Researching VLMs · Building PrimeMarket AI" />
+            </div>
           </aside>
         </div>
       </Section>
@@ -285,9 +317,16 @@ export default function Page() {
               className="group rounded-xl border border-white/10 p-6 bg-white/[0.02] hover:bg-white/[0.04] hover:border-white/20 transition-all"
             >
               <div className="flex items-start justify-between gap-4">
-                <div>
-                  <h3 className="text-lg font-medium text-white">{p.title}</h3>
-                  <p className="text-sm text-accent mt-1">{p.tagline}</p>
+                <div className="flex items-center gap-3">
+                  {p.logo && (
+                    <div className="relative w-10 h-10 rounded-lg overflow-hidden flex-shrink-0 bg-white/5 border border-white/10">
+                      <Image src={p.logo} alt={p.title} fill className="object-contain p-1" />
+                    </div>
+                  )}
+                  <div>
+                    <h3 className="text-lg font-medium text-white">{p.title}</h3>
+                    <p className="text-sm text-accent mt-0.5">{p.tagline}</p>
+                  </div>
                 </div>
                 {p.href && (
                   <span className="text-xs text-gray-500 group-hover:text-white transition-colors">↗</span>
