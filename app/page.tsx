@@ -392,8 +392,9 @@ export default function Page() {
             Have a problem worth solving?
           </h3>
           <p className="mt-3 text-gray-300 max-w-xl">
-            I&apos;m most interested in roles building AI-native B2B products, applied ML, and product analytics for
-            AI workspaces. Drop me a line — I reply fast.
+            I&apos;m open to roles across AI/ML engineering, data science, research, and product — whether that&apos;s
+            building AI-native products, applied ML systems, or anything at the intersection of data and impact.
+            Drop me a line — I reply fast.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <a
