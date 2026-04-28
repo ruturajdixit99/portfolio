@@ -126,9 +126,24 @@ const SKILLS = [
 ];
 
 const CERTS = [
-  "AWS Certified Machine Learning Engineer – Associate",
-  "Databricks Fundamentals Certified",
-  "PCAP: Programming Essentials in Python",
+  {
+    name: "AWS Certified Machine Learning Engineer – Associate",
+    issuer: "Amazon Web Services",
+    href: "https://www.credly.com/badges/af759325-fad5-4fef-8abb-8820301bc2e3/linked_in_profile",
+  },
+  {
+    name: "PySpark Essential Training: Introduction to Building Data Pipelines",
+    issuer: "LinkedIn Learning · Jan 2026",
+    href: "https://www.linkedin.com/learning/certificates/4a909a76714dd9fd054bb0a2f3f24a8ea014055054c73a74eb0d78d6e24f603c",
+  },
+  {
+    name: "Databricks Fundamentals Certified",
+    issuer: "Databricks",
+  },
+  {
+    name: "PCAP: Programming Essentials in Python",
+    issuer: "Cisco Networking Academy",
+  },
 ];
 
 export default function Page() {
@@ -374,11 +389,25 @@ export default function Page() {
 
         <div className="mt-8 rounded-xl border border-white/10 p-5 bg-white/[0.02]">
           <h4 className="text-sm uppercase tracking-wider text-gray-400 mb-3">Certifications</h4>
-          <ul className="space-y-2 text-gray-200">
+          <ul className="space-y-3 text-gray-200">
             {CERTS.map((c) => (
-              <li key={c} className="flex items-center gap-3">
-                <span className="h-1.5 w-1.5 rounded-full bg-accent" />
-                {c}
+              <li key={c.name} className="flex items-start gap-3">
+                <span className="h-1.5 w-1.5 rounded-full bg-accent mt-2 flex-shrink-0" />
+                <div>
+                  {c.href ? (
+                    <a
+                      href={c.href}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="hover:text-accent transition-colors underline underline-offset-4 decoration-white/20 hover:decoration-accent"
+                    >
+                      {c.name}
+                    </a>
+                  ) : (
+                    <span>{c.name}</span>
+                  )}
+                  <div className="text-xs text-gray-500 mt-0.5">{c.issuer}</div>
+                </div>
               </li>
             ))}
           </ul>
