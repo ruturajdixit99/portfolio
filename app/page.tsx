@@ -433,7 +433,7 @@ export default function Page() {
               dixitruturaj54@gmail.com
             </a>
             <a
-              href="https://www.linkedin.com/in/ruturajdixit/"
+              href="https://www.linkedin.com/in/ruturajdixit/?skipRedirect=true"
               target="_blank"
               rel="noreferrer"
               className="rounded-full border border-white/15 px-5 py-2.5 text-sm hover:border-white/40"
