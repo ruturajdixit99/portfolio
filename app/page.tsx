@@ -17,7 +17,7 @@ const EXPERIENCE = [
     dates: "Oct 2025 – Present",
     bullets: [
       "Selected by faculty (Profs. Sara Falcone, Paul Benjamin) to instruct and grade Python, ML, and AI Systems coursework — coaching graduate students on RAG pipelines, NLP, ML evaluation (AUC, F1, confusion matrix), and data-mining workflows.",
-      "Pace AI Lab researcher on the ADAPT architecture, fine-tuning frontier vision-language and depth-foundation models (Meta SAM 3D, Depth Anything v3, VGGT).",
+      "Pace University AI Lab researcher on the ADAPT architecture, fine-tuning frontier vision-language and depth-foundation models (Meta SAM 3D, Depth Anything v3, VGGT).",
       "AI-native operator — using ChatGPT, Claude, Cursor, and agentic tooling daily as throughput multipliers across research, code, and writing.",
     ],
     tags: ["Vision-Language Models", "RAG", "PyTorch", "Research"],
@@ -83,7 +83,7 @@ const PROJECTS = [
     cta: "Read on ResearchGate →",
   },
   {
-    title: "Pace AI Lab — ADAPT Research",
+    title: "Pace University AI Lab — ADAPT Research",
     tagline: "Vision-language & depth-foundation models",
     description:
       "Research on the ADAPT architecture — fine-tuning Meta SAM 3D, Depth Anything v3, and VGGT for downstream applications in human-AI interaction quality and trust.",
@@ -194,7 +194,7 @@ export default function Page() {
                 <a className="text-white underline underline-offset-4 decoration-accent/60 hover:decoration-accent" href="https://www.primemarketai.com">
                   PrimeMarket AI
                 </a>
-                , and now research vision-language and depth-foundation models at the Pace AI Lab while finishing
+                , and now research vision-language and depth-foundation models at the Pace University AI Lab while finishing
                 an M.S. in Data Science.
               </p>
               <div className="mt-10 flex flex-wrap gap-3 animate-fade-up" style={{ animationDelay: "240ms" }}>
