@@ -19,6 +19,7 @@ body {
   color: var(--fg);
   -webkit-font-smoothing: antialiased;
   font-feature-settings: "ss01", "cv11";
+  font-size: 18px;
 }
 
 ::selection {
